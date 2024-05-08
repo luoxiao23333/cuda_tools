@@ -2,7 +2,7 @@ import torch
 from cuda_tools.attn import mean_above_threshold # THIS LIB MUST BE IMPORTTED BEFORE torch
 
 # at::Tensor mean_above_threshold(const at::Tensor& input, float threshold);
-# @param 3 dim float32 tensors
+# @param input 3 dim float32 tensors
 # @return 2 dim torch.bool tensors
 
 attn_map = torch.rand((64, 600, 600), dtype=torch.float32, device="cuda")
